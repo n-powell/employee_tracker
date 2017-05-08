@@ -1,0 +1,19 @@
+<%= @division.name %>
+<h2>Add an employee</h2>
+<form action="/division/<%= @division.id %>/employee" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <select id="employee" name="employee">
+    <% @employees.each do |employee| %>
+    <option value="<%= employee.id %>"><%= employee.name %></option>
+    <% end %>
+  </select>
+  <button type="submit" class="btn btn-success">Add to division</button>
+</form>
+<h2><%= @division.name %> employees:</h2>
+<ul>
+  <% @division.employees.each do |employee| %>
+  <li><%= employee.name %></li>
+  <% end %>
+</ul>
+
+<a href="/">Home</a>

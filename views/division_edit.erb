@@ -1,9 +1,0 @@
-<h1>Update <%=@division.division() %> </h1>
-
-<form action="/divisions/<%= @division.id() %>" method="post">
-  <input name="_method" type="hidden" value="patch">
-  <label for="division">Redescribe your division:</label>
-  <input id="division" name="division" type="text">
-
-  <button type="submit">Update</button>
-</form>
