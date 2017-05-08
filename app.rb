@@ -58,6 +58,13 @@ delete('/division/:id/delete') do
   @division.delete
   redirect('/')
 end
+
+patch('/division/:id/update') do
+  @division = Division.find(params.fetch('id').to_i)
+  name = params.fetch("division_name")
+  @division.update({:division => name})
+  redirect('/')
+end
 # get('/divisions/:id/edit') do
 #   @division = Division.find(params.fetch("id").to_i())
 #   erb(:division_edit)
