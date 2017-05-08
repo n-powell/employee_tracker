@@ -1,4 +1,4 @@
-<%= @division.division %>
+<h1><%= @division.division %></h1> 
 <h2>Add an employee</h2>
 <form action="/division/<%= @division.id %>/employee" method="post">
   <input type="hidden" name="_method" value="patch">
@@ -15,5 +15,9 @@
   <li><%= employee.name %></li>
   <% end %>
 </ul>
+<form action="/division/<%= @division.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn btn-danger" type="submit">Delete Division</button>
+</form>
 
 <a href="/">Home</a>

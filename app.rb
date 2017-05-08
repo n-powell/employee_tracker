@@ -52,6 +52,12 @@ patch('/division/:id/employee') do
   current_employee.update(division_id: @division.id)
   erb(:index)
 end
+
+delete('/division/:id/delete') do
+  @division = Division.find(params.fetch('id').to_i)
+  @division.delete
+  redirect('/')
+end
 # get('/divisions/:id/edit') do
 #   @division = Division.find(params.fetch("id").to_i())
 #   erb(:division_edit)
