@@ -1,4 +1,4 @@
-<%= @division.name %>
+<%= @division.division %>
 <h2>Add an employee</h2>
 <form action="/division/<%= @division.id %>/employee" method="post">
   <input type="hidden" name="_method" value="patch">
@@ -9,7 +9,7 @@
   </select>
   <button type="submit" class="btn btn-success">Add to division</button>
 </form>
-<h2><%= @division.name %> employees:</h2>
+<h2><%= @division.division %> employees:</h2>
 <ul>
   <% @division.employees.each do |employee| %>
   <li><%= employee.name %></li>

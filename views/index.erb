@@ -4,10 +4,9 @@
 <h2>All Divisions</h2>
 <ul>
 <% @all_divisions.each do |division| %>
-<li><a href="/division/<%=division.id%>"><%= division.division %></a></li>
+<li><a href="/division/<%=division.id%>"><%= division.division %></a>    </li>
 <% end %>
 </ul>
-
 <h2>All Employees</h2>
 <ul>
 <% @all_employees.each do |employee| %>
